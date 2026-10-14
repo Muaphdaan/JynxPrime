@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://muaphdaan.github.io/JynxPrime/sitemap.xml
