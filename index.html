@@ -80,35 +80,37 @@
         <h2 id="h-overlays">Overlays while you play</h2>
         <p>JynxPrime follows Warframe's log to know which screen you're on, reads that screen with text recognition that runs on your PC, and shows a small panel on top of the game.</p>
       </div>
-      <div class="overlays">
+      <div class="showcase">
         <div class="overlay">
           <h3>Relic rewards</h3>
-          <p>Platinum and ducat values under each reward card, with how many you own and whether it's vaulted. Before a fissure starts, it lists your best relics for it.</p>
-          <div class="game" role="img" aria-label="Example of the relic reward overlay: four rewards with platinum and ducat values, the most valuable marked as the best pick.">
-            <div class="cards">
-              <div class="rw best"><b>Nekros Prime Systems Blueprint</b><div class="n"><span class="plat-v">14p</span><span class="duc-v">45 duc</span></div><div class="m">Owned 0 · Vaulted</div><span class="tagline">Best pick</span></div>
-              <div class="rw"><b>Paris Prime String</b><div class="n"><span class="plat-v">3p</span><span class="duc-v">25 duc</span></div><div class="m">Owned 2</div></div>
-              <div class="rw"><b>Forma Blueprint</b><div class="n"><span class="plat-v">–</span><span class="duc-v">–</span></div><div class="m">Owned 12</div></div>
-              <div class="rw"><b>Akstiletto Prime Barrel</b><div class="n"><span class="plat-v">5p</span><span class="duc-v">45 duc</span></div><div class="m">Owned 1</div></div>
-            </div>
-          </div>
-          <p class="note">Drawn with example prices, not a game screenshot.</p>
+          <p>A strip under the reward cards shows each reward's platinum and ducat value and marks the best pick. It also shows how many you own, the set's price, whether it's vaulted and which parts of the set you already have. Before a fissure starts, it lists your best relics for it.</p>
         </div>
+        <div class="game strip">
+          <picture>
+            <source srcset="img/overlay-reward-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="img/overlay-reward-light.webp" width="964" height="140" loading="lazy" alt="The relic rewards overlay with four rewards. Lavos Prime Systems Blueprint is marked Best pick at 21 platinum and 100 ducats, and you own 3 of the 4 parts of its set, which sells for 70 platinum. Steflos Prime Receiver is worth 3 platinum and 15 ducats, and you own 2. Forma Blueprint shows Owned: 7. Styanax Prime Chassis Blueprint is worth 6 platinum and 45 ducats and is flagged Not crafted.">
+          </picture>
+        </div>
+        <p class="note">The app's own overlay, drawn with example prices.</p>
+      </div>
+      <div class="showcase">
         <div class="overlay">
           <h3>Riven cycling</h3>
-          <p>When you cycle or reroll a riven, both rolls are graded for that weapon and priced from warframe.market, with a verdict: sell, reroll or keep.</p>
-          <div class="game" role="img" aria-label="Example of the riven overlay: the current roll is grade C at about 30 to 50 platinum, the new roll is grade A at about 180 to 260 platinum and is marked keep.">
-            <div class="rolls">
-              <div class="roll"><div class="t">Current roll</div><div class="g">C</div>
-                <ul><li>+92% Multishot</li><li>+64% Status Chance</li><li class="neg">−38% Zoom</li></ul>
-                <div class="v"><span class="plat-v">30–50p</span><span class="verdict">Reroll</span></div></div>
-              <div class="roll keep"><div class="t">New roll</div><div class="g">A</div>
-                <ul><li>+141% Critical Chance</li><li>+118% Critical Damage</li><li class="neg">−52% Impact</li></ul>
-                <div class="v"><span class="plat-v">180–260p</span><span class="verdict">Keep</span></div></div>
-            </div>
-          </div>
-          <p class="note">Drawn with made-up numbers.</p>
+          <p>When you cycle a riven, a panel on each side of the game's cards shows your current roll and the new one. Each panel grades the roll for that weapon, from Bad to Godly, and estimates what it's worth. It also lists similar rivens on warframe.market and the weapon's god rolls, so you can choose which roll to keep.</p>
         </div>
+        <div class="game rolls">
+          <picture>
+            <source srcset="img/overlay-riven-current-dark.webp" media="(prefers-color-scheme: dark)">
+            <img class="cut" src="img/overlay-riven-current-light.webp" width="400" height="571" loading="lazy" alt="The left riven panel, Current roll: Evensong Satitis with +131% Multishot, +172.5% Critical Damage and a bad negative, -95.7% Damage. It is rated Okay roll, worth about 20 platinum, followed by similar rivens for sale.">
+          </picture>
+          <picture>
+            <source srcset="img/overlay-riven-new-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="img/overlay-riven-new-light.webp" width="440" height="571" loading="lazy" alt="The right riven panel, New roll: Evensong Crita-satitis with +144.4% Critical Damage, +108.3% Multishot, +180.6% Critical Chance and a good negative, -57.8% Zoom. It is rated Godly roll, worth about 7,450 platinum, with similar rivens for sale and the bow's god rolls.">
+          </picture>
+        </div>
+        <p class="note">The app's own overlays, with warframe.market listings from October 2026. In game the left panel is taller; it's cut short here.</p>
+      </div>
+      <div class="overlays">
         <div class="overlay">
           <h3>Trades close your listings</h3>
           <p>When you finish a trade in game, JynxPrime finds the matching warframe.market listing and lowers its quantity or closes it.</p>

@@ -123,24 +123,16 @@ kbd { font-family: var(--font); font-size: .9em; font-weight: 600; color: var(--
 .overlays { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 48px; margin-top: 36px; }
 .overlay p { color: var(--text-2); margin-top: 8px; }
 .overlay .note { font-size: 13px; color: var(--text-3); margin-top: 8px; }
-.game { margin-top: 18px; border-radius: 8px; background: #1d1b2b; background-image: linear-gradient(170deg, #25223a, #1a1826 70%); padding: 14px; overflow-x: auto; }
-.cards { display: grid; grid-template-columns: repeat(4, minmax(112px, 1fr)); gap: 8px; min-width: 480px; }
-.rw, .roll { background: rgba(10, 9, 20, .82); border: 1px solid rgba(255, 255, 255, .12); border-radius: 6px; padding: 9px 10px; color: #eeecf8; font-size: 12.5px; line-height: 1.35; }
-.rw b { display: block; font-weight: 600; font-size: 13px; min-height: 2.7em; }
-.rw .n { display: flex; justify-content: space-between; margin-top: 6px; font-variant-numeric: tabular-nums; }
-.plat-v { color: #c9bbff; font-weight: 700; }
-.duc-v { color: #f3cf7a; font-weight: 700; }
-.rw .m { color: #a9a5c2; margin-top: 4px; font-size: 11.5px; }
-.rw.best, .roll.keep { border-color: #84e0c1; box-shadow: inset 0 0 0 1px #84e0c1; }
-.tagline { display: inline-block; margin-top: 6px; background: #84e0c1; color: #0f2c24; font-weight: 700; font-size: 11px; padding: 1px 7px; border-radius: 3px; }
-.rolls { display: grid; grid-template-columns: repeat(2, minmax(150px, 1fr)); gap: 8px; min-width: 320px; }
-.roll .t { color: #a9a5c2; font-size: 12px; }
-.roll .g { font-family: var(--font-head); font-size: 22px; font-weight: 700; margin-top: 2px; }
-.roll ul { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 2px; }
-.roll .neg { color: #ff9eb1; }
-.roll .v { margin-top: 8px; display: flex; justify-content: space-between; align-items: center; gap: 6px; }
-.roll .verdict { font-weight: 700; font-size: 11px; padding: 1px 7px; border-radius: 3px; background: rgba(255, 255, 255, .12); }
-.roll.keep .verdict { background: #84e0c1; color: #0f2c24; }
+.showcase { margin-top: 36px; }
+.showcase .overlay { max-width: 760px; }
+.showcase .note { font-size: 13px; color: var(--text-3); margin-top: 8px; }
+/* The game behind the overlays: the pictures are the app's own overlay windows (rendered 2x), with Windows 11's
+   rounded window corners. A narrow screen scrolls the reward strip sideways instead of shrinking its text. */
+.game { margin-top: 18px; border-radius: 8px; background: #1d1b2b; background-image: linear-gradient(170deg, #25223a, #1a1826 70%); padding: 18px; overflow-x: auto; }
+.game img { border-radius: 8px; box-shadow: 0 10px 28px -12px rgba(0, 0, 0, .7); }
+.game.strip img { width: 964px; max-width: none; margin-inline: auto; }
+.game.rolls { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 18px; }
+.game.rolls img.cut { border-radius: 8px 8px 0 0; -webkit-mask-image: linear-gradient(#000 82%, transparent); mask-image: linear-gradient(#000 82%, transparent); }
 .trade-steps { margin: 18px 0 0; padding-left: 22px; color: var(--text-2); display: grid; gap: 4px; }
 .needs { margin-top: 36px; padding: 14px 16px; border-radius: 6px; background: var(--surface-2); color: var(--text-2); font-size: 15px; max-width: 760px; }
 
