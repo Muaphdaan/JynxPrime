@@ -49,7 +49,7 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
           Download for Windows
         </a>
-        <p class="meta">Version 1.0.0 (build 2026.11.16.1101) · 92 MB installer · free<br>Windows 10 or 11, 64-bit · <a href="download/portable/">portable zip</a> · <a href="#download">other options</a></p>
+        <p class="meta">Version 1.0.0 (build 2026.11.22.1231) · 92 MB installer · free<br>Windows 10 or 11, 64-bit · <a href="download/portable/">portable zip</a> · <a href="#download">other options</a></p>
       </div>
     </div>
     <figure class="shot">
@@ -134,61 +134,44 @@
     <div class="wrap changes">
       <div>
         <h2 id="h-changes">What's new</h2>
-        <p class="when">Build 2026.11.16.1101, released November 16, 2026</p>
+        <p class="when">Build 2026.11.22.1231, released November 22, 2026</p>
       </div>
       <div class="notes">
         <ul>
-          <li>JynxPrime now asks before it updates, then closes, installs the update and opens again by itself.</li>
-          <li>There's a Windows installer now, <strong>JynxPrime-Setup.exe</strong>, on the website.</li>
-          <li>New <strong>Trackers › Arbitrations</strong> tab with node tiers and alerts, and a <strong>Trackers › Crafting</strong> to-build list.</li>
-          <li>New Riven Splicing overlay that tells you whether a splice is worth a Riven Splicer.</li>
-          <li>Live sync works again on accounts where it failed with "'list' object has no attribute 'get'".</li>
+          <li>The overlays on Warframe's Riven Splicing screen now work on 16:9 screens like 1920×1080 and 2560×1440. Before, only 16:10 screens worked.</li>
+          <li>When api.warframestat.us is down, the in-game overlays still start. Before, its errors could keep them from starting at all.</li>
         </ul>
         <details><summary>All changes</summary>
-          <h3>Installing and updating</h3>
+          <h3>Riven Splicing screen</h3>
           <ul>
-            <li>On the October version, this one update still arrives the old way: about 30 seconds after you open the app it downloads by itself ("A JynxPrime update was downloaded") and installs when you close the app. It won't open again by itself this time, so give it a few seconds and open JynxPrime yourself. From then on it asks before each update.</li>
-            <li><strong>Update JynxPrime?</strong> shows the new build and its download size, even while JynxPrime is still loading. Nothing downloads until you click <strong>Yes, update now</strong>, and then a progress bar shows the download. Click <strong>No</strong> and it asks again next start (or as soon as a newer build is out), and an <strong>Update available</strong> button stays in the top bar.</li>
-            <li>The app checks as soon as it opens and then every hour (it used to be every 6 hours).</li>
-            <li><strong>Settings › About</strong> now also says whether you're up to date, with a <strong>Check for updates</strong> button, and an <strong>Update now</strong> button when there's an update. The sidebar footer shows your version too and says when an update is available. Click it to open Settings. The version is now 1.0.0.</li>
-            <li>If JynxPrime is also open in another window, <strong>Update now</strong> asks you to close that one first. If an update still can't finish, your old version opens again and says why, and the next <strong>Update now</strong> doesn't download it again.</li>
-            <li>A copy in a folder Windows won't let it change, like Program Files, can't update itself. Its prompt offers <strong>Open the download page</strong> instead.</li>
-            <li>Downloads are now on the <a href="https://muaphdaan.github.io/JynxPrime/">JynxPrime website</a>. <strong>JynxPrime-Setup.exe</strong> (Windows 10 or 11, 64-bit) installs for your Windows user only, with no admin prompt. It adds a Start menu entry (a desktop shortcut is optional) and shows up in Windows <strong>Settings › Apps</strong>. The installed copy updates itself just like the zip. Windows may show a blue SmartScreen box when you run it: click <strong>More info</strong>, then <strong>Run anyway</strong>. Uninstalling keeps your account and settings. The zip is still there, now called JynxPrime.zip. If your zip copy already updates itself, you don't need the installer.</li>
+            <li>On 16:9 screens, <strong>Splice check</strong> often checked a guessed splice instead of the one you picked, and the panels covered the game's LOSE / GAIN and your rivens. Both panels are now placed to fit your screen's shape. <strong>Riven splicing</strong> sits at the top, right of your rivens. <strong>Splice check</strong> sits under LOSE / GAIN, or on 16:9 and wider screens under the SPLICE button.</li>
+            <li>The panels get smaller with Warframe's Menu Scale, like the game's own menus, down to a size that stays readable. They follow what you set in <strong>Settings › In-game overlays › Warframe "Menu Scale" setting</strong>, so make it match the game, or click <strong>Autodetect</strong> next to it.</li>
+            <li><strong>Splice check</strong> shows LOSE and GAIN on lines of their own, so they no longer run past the panel's edge. On small screens, when a panel is too short for every line, <strong>Splice check</strong> leaves out its last lines and <strong>Riven splicing</strong> its worst splices, whole, instead of squeezing every line.</li>
+            <li><strong>Riven splicing</strong> now shows your Riven Splicers in its header (<strong>Splicers 2</strong>) instead of at the bottom of the list. If you imported an inventory file, it says <strong>Splicers 0</strong> when you have none, where it used to say ?.</li>
+            <li>A riven whose name takes two lines on the card now gets its weapon.</li>
+            <li>JynxPrime now reads the splicing screen when something on it changes, and otherwise every 4 seconds, never more than once a second. Before, while no riven was picked, it read the screen four times a second. It now uses less of your PC's power while you play.</li>
           </ul>
-          <h3>Main window</h3>
+          <h3>All riven overlays</h3>
           <ul>
-            <li>The window has its own title bar in the app's light or dark theme. Drag it to move the window, or double-click it to maximize or restore. A maximized window has to be restored before you can drag it, and dragging to a screen edge no longer snaps it into place. On Windows 11 the corners are rounded.</li>
-            <li>With <strong>Settings › General › Show a warning when trying to close the main app window</strong> on, closing asks "Do you really want to quit JynxPrime?" in the app's own style instead of a Windows message box.</li>
+            <li>Elemental stats like Cold or Electricity, whose icon sits next to the value, are no longer missed on riven cards.</li>
+            <li>A stat line JynxPrime can't read clearly is no longer mixed into the stat above it.</li>
+            <li>When JynxPrime reads a card twice, a worse second reading no longer replaces a good first one. On 16:9 screens this could make <strong>Splice check</strong> wrongly say "No two traits on this riven splice together."</li>
+            <li>Zaw and Kitgun rivens now get their weapon too.</li>
+            <li>If Windows is set to a language like Russian or Chinese and has no English language pack, the riven overlays now show up. Before, they never opened there. JynxPrime now uses its built-in text reader (PaddleOCR) instead of Windows' for those screens.</li>
+            <li>In a Warframe window narrower than 1920 pixels, the riven overlays find the game's screens more reliably.</li>
+            <li>In <strong>Your riven</strong>, <strong>Current roll</strong> and <strong>New roll</strong>, the price range after <strong>Value</strong> now ends in "…" when it's too long, so the <strong>low data</strong>, <strong>capped</strong> and <strong>old data</strong> tags after it stay in view. Before, the text was cut off mid-word and the tags didn't show.</li>
           </ul>
-          <h3>In-game overlays</h3>
+          <h3>When warframestat.us is down</h3>
           <ul>
-            <li>Open Riven Splicing in game and pick a riven. <strong>Splice check</strong> rates the selected splice as Worth a Splicer, Maybe or Skip it. It shows what you lose and gain, the chance the extra random trait is one the weapon wants, and the riven's value before and after. <strong>Riven splicing</strong> lists every splice the riven allows, best first, and how many Riven Splicers you have (from your synced inventory; it shows ? when it can't tell). It's switched by the existing <strong>Settings › In-game overlays › Enable riven overlays</strong>.</li>
-            <li>The relic rewards overlay no longer shows junk "Not recognised" cards if you were alt-tabbed when the reward screen opened. It waits until you're back in the game, and if it still can't read the cards it says so. If you used Ctrl+Tab on it, it now closes with the reward screen.</li>
-            <li>The fissure relic picker keeps reading while it's open, so it narrows to the fissure's relic type instead of quietly listing every type. Until it can tell, a gold <strong>Fissure not read</strong> flag shows. Requiem fissures are recognised more reliably. The picker also still works if JynxPrime starts, or restarts for an update, while Warframe is already running.</li>
-            <li>Overlays appear without fading in and disappear faster when you alt-tab. The riven overlays close about 0.3 seconds after you leave the screen, and no longer get stuck open.</li>
+            <li>api.warframestat.us, where JynxPrime gets Prime part prices, much of the worldstate and WFInfo's part list, had a long outage on November 22. JynxPrime now starts the overlays and its reading of the game log (EE.log) right after the game data, and fetches Prime prices and the worldstate after that, so an outage no longer keeps them from starting.</li>
+            <li>When WFInfo's part list can't be loaded and there's no good saved copy (a new PC, or one that loaded its game data during the outage), JynxPrime no longer gets stuck on the loading screen. It starts with warframe.market's part list, with the right number of each part (2 barrels for Akbolto Prime), and tries WFInfo's again every 10 minutes.</li>
+            <li>The relic overlays and the <strong>Relic planner</strong> rank relics with the new prices as soon as they come in, at startup and when Warframe launches.</li>
+            <li>A problem in one background task (prices, the worldstate, price or Arbitration alerts, your warframe.market listings…) no longer stops the others, and no longer keeps the overlays off after Warframe starts. It's written to companion.log (in %APPDATA%\JynxPrime) instead.</li>
           </ul>
-          <h3>Rivens</h3>
+          <h3>Good to know</h3>
           <ul>
-            <li>Riven Disposition was retired in Hotfix 44.1.3, so every riven's stats are now worked out at the same 1.2 multiplier, in <strong>Trade &amp; rivens › Rivens</strong> and the in-game overlays. Stats match the game's card again, and rivens that only showed stat names now show numbers. The disposition dots, the <strong>Disposition</strong> row, the overlays' disposition multiplier and the disposition remarks in <strong>What it's worth</strong> are gone.</li>
-            <li>Price estimates convert warframe.market auctions listed before the change to the new numbers before comparing. <strong>Sell on warframe.market</strong> no longer refuses a riven because its weapon's disposition was missing.</li>
-          </ul>
-          <h3>Relics</h3>
-          <ul>
-            <li>The <strong>Relic planner</strong> has a <strong>Requiem</strong> era button.</li>
-            <li>Requiem Eterna relics you own now show up in the Relic planner, <strong>Inventory › Relics</strong> and the relic overlays.</li>
-            <li>Requiem relics aren't marked Vaulted any more, so filtering to unvaulted relics doesn't hide them.</li>
-            <li><strong>Inventory › Relics</strong> search also finds relics by their rewards, like "Lohk".</li>
-            <li>In the <strong>Relic planner</strong>, the Filters button gets a dot when filters in it are narrowing the list. An empty list says what's hiding relics and has a <strong>Clear search and filters</strong> button. If your relics can't load, it says why and offers <strong>Try again</strong>.</li>
-          </ul>
-          <h3>Trackers</h3>
-          <ul>
-            <li>New <strong>Arbitrations</strong> tab: the current Arbitration and the schedule up to 7 days ahead, with each node's S to F tier from arbi.guide (or Unrated). It also shows what's coming up from your favourites and alert tiers, and the next S and A tier nodes. Search nodes, filter by mission type or tier, or show favourites only. The <strong>Daily &amp; weekly</strong> tab's Arbitration now shows the node's tier too.</li>
-            <li>Star (★) a node, or tick tiers under <strong>Also alert for</strong>, to get an alert before it starts while JynxPrime is running. It comes 10 minutes before by default, and you can change that under <strong>Alert</strong>, from when it starts to 1 hour before. Nothing is starred at first. <strong>Settings › Notifications › Arbitrations coming up</strong> turns these alerts off.</li>
-            <li>New <strong>Crafting</strong> tab: add anything you build in the Foundry (a Warframe, weapon, part, Forma…), as many as you want. Each one shows whether it's ready to build, what you're still missing and where to get it, the credits it costs and its build time. It adds up the resources for your whole list and gives what you own to the entries at the top first, so move the one you want first to the top. It needs live sync or an imported inventory to know what you have.</li>
-          </ul>
-          <h3>Fixes</h3>
-          <ul>
-            <li>Live sync no longer fails with "'list' object has no attribute 'get'" on some accounts, for example with MOA companions. Importing an inventory file had the same problem.</li>
+            <li>The first start after this update takes a few seconds longer while JynxPrime rebuilds its game data. This also repairs game data loaded during the outage.</li>
+            <li>As before, Warframe needs to be in English for the riven overlays, and in borderless or windowed mode for all overlays.</li>
           </ul>
         </details>
       </div>
@@ -199,7 +182,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="h-download">Download</h2>
-        <p>Version 1.0.0, build 2026.11.16.1101. Free, no account needed.</p>
+        <p>Version 1.0.0, build 2026.11.22.1231. Free, no account needed.</p>
       </div>
       <div class="files">
         <div class="file main">
@@ -218,8 +201,8 @@
       <details class="sums">
         <summary>SHA-256 checksums</summary>
         <dl>
-          <dt>JynxPrime-Setup.exe</dt><dd>9138b56043b0f5ccbaef4a8d28362e2e9569724e8e18edb0dadc3dcc3107cc2b</dd>
-          <dt>JynxPrime.zip</dt><dd>020c2762dd25fe825c1fffbae17c21fc52579fd785f101631a91952b0b671537</dd>
+          <dt>JynxPrime-Setup.exe</dt><dd>5249f5f6f04404fb945cc05bbd42232e72bd41d40427f5356fc91b0ef8a9270e</dd>
+          <dt>JynxPrime.zip</dt><dd>c27f08f324ef36c52b4c7f1a14e5e4a8936b9fef48c1a30e3c92174a8a65b9c2</dd>
         </dl>
       </details>
       <div class="install">
