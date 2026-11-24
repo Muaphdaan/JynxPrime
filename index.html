@@ -49,7 +49,7 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
           Download for Windows
         </a>
-        <p class="meta">Version 1.0.0 (build 2026.11.22.1231) · 92 MB installer · free<br>Windows 10 or 11, 64-bit · <a href="download/portable/">portable zip</a> · <a href="#download">other options</a></p>
+        <p class="meta">Version 1.0.0 (build 2026.11.23.2310) · 92 MB installer · free<br>Windows 10 or 11, 64-bit · <a href="download/portable/">portable zip</a> · <a href="#download">other options</a></p>
       </div>
     </div>
     <figure class="shot">
@@ -134,44 +134,44 @@
     <div class="wrap changes">
       <div>
         <h2 id="h-changes">What's new</h2>
-        <p class="when">Build 2026.11.22.1231, released November 22, 2026</p>
+        <p class="when">Build 2026.11.23.2310, released November 23, 2026</p>
       </div>
       <div class="notes">
         <ul>
-          <li>The overlays on Warframe's Riven Splicing screen now work on 16:9 screens like 1920×1080 and 2560×1440. Before, only 16:10 screens worked.</li>
-          <li>When api.warframestat.us is down, the in-game overlays still start. Before, its errors could keep them from starting at all.</li>
+          <li>The in-game overlays should now work on every screen shape and size: 16:10, 4:3, 5:4, ultrawide 21:9 and 32:9, from 720p to 4K. They size everything the way Warframe sizes its menus, from a 1080p layout scaled to fit your screen.</li>
+          <li>The overlays now follow Warframe's Menu Scale on every screen. At 70% and below, the riven cycling overlays used to miss the game's buttons and never open.</li>
+          <li>In Riven Splicing, picking another riven no longer leaves the last riven's advice up when JynxPrime can't read the new card.</li>
         </ul>
         <details><summary>All changes</summary>
-          <h3>Riven Splicing screen</h3>
+          <h3>Every screen shape</h3>
           <ul>
-            <li>On 16:9 screens, <strong>Splice check</strong> often checked a guessed splice instead of the one you picked, and the panels covered the game's LOSE / GAIN and your rivens. Both panels are now placed to fit your screen's shape. <strong>Riven splicing</strong> sits at the top, right of your rivens. <strong>Splice check</strong> sits under LOSE / GAIN, or on 16:9 and wider screens under the SPLICE button.</li>
-            <li>The panels get smaller with Warframe's Menu Scale, like the game's own menus, down to a size that stays readable. They follow what you set in <strong>Settings › In-game overlays › Warframe "Menu Scale" setting</strong>, so make it match the game, or click <strong>Autodetect</strong> next to it.</li>
-            <li><strong>Splice check</strong> shows LOSE and GAIN on lines of their own, so they no longer run past the panel's edge. On small screens, when a panel is too short for every line, <strong>Splice check</strong> leaves out its last lines and <strong>Riven splicing</strong> its worst splices, whole, instead of squeezing every line.</li>
-            <li><strong>Riven splicing</strong> now shows your Riven Splicers in its header (<strong>Splicers 2</strong>) instead of at the bottom of the list. If you imported an inventory file, it says <strong>Splicers 0</strong> when you have none, where it used to say ?.</li>
-            <li>A riven whose name takes two lines on the card now gets its weapon.</li>
-            <li>JynxPrime now reads the splicing screen when something on it changes, and otherwise every 4 seconds, never more than once a second. Before, while no riven was picked, it read the screen four times a second. It now uses less of your PC's power while you play.</li>
+            <li>The overlays grow and shrink with the game like its menus do: bigger at 1440p and 4K, smaller but still readable at 720p. At 1920×1080 their content is the same size as before. If you set <strong>Rewards overlay size</strong> to Large or Extra large because it was small on a 1440p or 4K screen, try Compact again.</li>
+            <li>Relic rewards: on 16:10, 4:3 and 5:4 screens, the reward names are read from the right places. Before, four rewards could be read as three. At 720p, 768p and 900p, the rewards overlay no longer covers the bottom of the booster row.</li>
+            <li>Relic selection: on 4:3 and 5:4 screens, Omnia fissures are now recognised, and at 1024×768 the relic overlay no longer covers the fifth column of relics.</li>
+            <li>Rivens linked in chat: on ultrawide screens, the card now sits right beside the game's popup instead of at the far edge.</li>
+            <li>Riven cycling: on 16:10, 4:3 and 5:4 screens, JynxPrime finds the riven card by its MR line, so it never shows a roll made of the wrong lines. If it can't tell, it shows nothing. On 32:9 screens it now finds the riven's weapon.</li>
+            <li>Riven Splicing: <strong>Splice check</strong> and <strong>Riven splicing</strong> are only as tall as what's in them, so on 4:3 and 5:4 screens and at lower Menu Scales they no longer cover the game with empty space. On 4:3 and 5:4, <strong>Riven splicing</strong> now sits under <strong>Splice check</strong>, where it has more room. On ultrawide screens, JynxPrime finds the splicing column from the game's SPLICE button.</li>
+            <li>When Windows' built-in text reader takes the game's text as slightly tilted, JynxPrime now corrects the positions it reports. Before, this could keep the riven cycling overlays from noticing the reroll screen.</li>
           </ul>
-          <h3>All riven overlays</h3>
+          <h3>Menu Scale</h3>
           <ul>
-            <li>Elemental stats like Cold or Electricity, whose icon sits next to the value, are no longer missed on riven cards.</li>
-            <li>A stat line JynxPrime can't read clearly is no longer mixed into the stat above it.</li>
-            <li>When JynxPrime reads a card twice, a worse second reading no longer replaces a good first one. On 16:9 screens this could make <strong>Splice check</strong> wrongly say "No two traits on this riven splice together."</li>
-            <li>Zaw and Kitgun rivens now get their weapon too.</li>
-            <li>If Windows is set to a language like Russian or Chinese and has no English language pack, the riven overlays now show up. Before, they never opened there. JynxPrime now uses its built-in text reader (PaddleOCR) instead of Windows' for those screens.</li>
-            <li>In a Warframe window narrower than 1920 pixels, the riven overlays find the game's screens more reliably.</li>
-            <li>In <strong>Your riven</strong>, <strong>Current roll</strong> and <strong>New roll</strong>, the price range after <strong>Value</strong> now ends in "…" when it's too long, so the <strong>low data</strong>, <strong>capped</strong> and <strong>old data</strong> tags after it stay in view. Before, the text was cut off mid-word and the tags didn't show.</li>
+            <li>Set it in <strong>Settings › In-game overlays › Warframe "Menu Scale" setting</strong>, or click <strong>Autodetect</strong> next to it. With a Custom Menu Scale, Autodetect now reads the right percentage. Before, it could come out far too small (even 1%), so if you use Custom, click it again.</li>
+            <li>Below Full, the riven cycling overlays now open at 70% and below and with Legacy at 1440p, and they no longer cover the currency bar or LOCK TRAIT. The relic overlay no longer covers the currency bar, and it shows your Void Traces at 90% and below instead of "–".</li>
+            <li>With Legacy on 16:10 screens like 1920×1200, JynxPrime now takes the menus as full size, which should match the game (not yet checked in game).</li>
           </ul>
-          <h3>When warframestat.us is down</h3>
+          <h3>Riven Splicing</h3>
           <ul>
-            <li>api.warframestat.us, where JynxPrime gets Prime part prices, much of the worldstate and WFInfo's part list, had a long outage on November 22. JynxPrime now starts the overlays and its reading of the game log (EE.log) right after the game data, and fetches Prime prices and the worldstate after that, so an outage no longer keeps them from starting.</li>
-            <li>When WFInfo's part list can't be loaded and there's no good saved copy (a new PC, or one that loaded its game data during the outage), JynxPrime no longer gets stuck on the loading screen. It starts with warframe.market's part list, with the right number of each part (2 barrels for Akbolto Prime), and tries WFInfo's again every 10 minutes.</li>
-            <li>The relic overlays and the <strong>Relic planner</strong> rank relics with the new prices as soon as they come in, at startup and when Warframe launches.</li>
-            <li>A problem in one background task (prices, the worldstate, price or Arbitration alerts, your warframe.market listings…) no longer stops the others, and no longer keeps the overlays off after Warframe starts. It's written to companion.log (in %APPDATA%\JynxPrime) instead.</li>
+            <li>When you pick another riven and its card can't be read yet, both panels dim and say <strong>reading…</strong>, then show "Can't read the riven on screen." Before, they could keep the last riven's splices up.</li>
+            <li>If JynxPrime finds the splicing screen but can't read it at all, the panels now open after a few seconds and say so. Before, nothing showed up.</li>
+          </ul>
+          <h3>Other fixes</h3>
+          <ul>
+            <li>A riven linked in chat is no longer taken for its weapon's Prime version when someone in chat names the Prime (like "WTB Soma Prime").</li>
+            <li>With Warframe on a second monitor, the overlays no longer jump to your main monitor when JynxPrime briefly loses track of the game window.</li>
           </ul>
           <h3>Good to know</h3>
           <ul>
-            <li>The first start after this update takes a few seconds longer while JynxPrime rebuilds its game data. This also repairs game data loaded during the outage.</li>
-            <li>As before, Warframe needs to be in English for the riven overlays, and in borderless or windowed mode for all overlays.</li>
+            <li>Only 16:9 screens (and 16:10 on the Riven Splicing screen) were measured in the game so far. Other shapes follow Warframe's sizing rules. If an overlay looks off on your screen, a screenshot and your companion.log (in %APPDATA%\JynxPrime) help: it now notes your game's size and Menu Scale when it sees a screen it can't read.</li>
           </ul>
         </details>
       </div>
@@ -182,7 +182,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="h-download">Download</h2>
-        <p>Version 1.0.0, build 2026.11.22.1231. Free, no account needed.</p>
+        <p>Version 1.0.0, build 2026.11.23.2310. Free, no account needed.</p>
       </div>
       <div class="files">
         <div class="file main">
@@ -201,8 +201,8 @@
       <details class="sums">
         <summary>SHA-256 checksums</summary>
         <dl>
-          <dt>JynxPrime-Setup.exe</dt><dd>5249f5f6f04404fb945cc05bbd42232e72bd41d40427f5356fc91b0ef8a9270e</dd>
-          <dt>JynxPrime.zip</dt><dd>c27f08f324ef36c52b4c7f1a14e5e4a8936b9fef48c1a30e3c92174a8a65b9c2</dd>
+          <dt>JynxPrime-Setup.exe</dt><dd>e595f8e855798790a6816cd6d6394cc83419f73c9d321cd9331c12cd10996b54</dd>
+          <dt>JynxPrime.zip</dt><dd>1dd03e67e1852e64efff7b16f0c4df51ecd5e9f5365f855a778f472094973635</dd>
         </dl>
       </details>
       <div class="install">
