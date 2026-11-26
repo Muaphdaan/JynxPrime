@@ -1,13 +1,13 @@
 {
-  "build": "2026.11.25.2128",
+  "build": "2026.11.25.2329",
   "version": "1.0.0",
   "released": "2026-11-25",
-  "url": "https://github.com/Muaphdaan/JynxPrime/releases/download/v2026.11.25.2128/JynxPrime.zip",
-  "size": 122145808,
-  "sha256": "6e01841fe8c4ef0394bd3d4da5394867ae62e2e1f3105fd3b94ec0b15ee9ca1d",
+  "url": "https://github.com/Muaphdaan/JynxPrime/releases/download/v2026.11.25.2329/JynxPrime.zip",
+  "size": 122159041,
+  "sha256": "341a3684607f8452ad8121753cf28c242944ea102d8254d3aa49352b3e2c3bc8",
   "setup": {
-    "url": "https://github.com/Muaphdaan/JynxPrime/releases/download/v2026.11.25.2128/JynxPrime-Setup.exe",
-    "size": 96459025,
-    "sha256": "6e7f149061da0f5ab79a4fb0f7db303a3f9cca7cc248589c93b1f975c8e1c559"
+    "url": "https://github.com/Muaphdaan/JynxPrime/releases/download/v2026.11.25.2329/JynxPrime-Setup.exe",
+    "size": 96463784,
+    "sha256": "e3477ad762eea922a78f824d203cc21b9bed884c6089c8c3296153f59815dd5a"
   }
 }

@@ -49,7 +49,7 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
           Download for Windows
         </a>
-        <p class="meta">Version 1.0.0 (build 2026.11.25.2128) · 92 MB installer · free<br>Windows 10 or 11, 64-bit · <a href="download/portable/">portable zip</a> · <a href="#download">other options</a></p>
+        <p class="meta">Version 1.0.0 (build 2026.11.25.2329) · 92 MB installer · free<br>Windows 10 or 11, 64-bit · <a href="download/portable/">portable zip</a> · <a href="#download">other options</a></p>
       </div>
     </div>
     <figure class="shot">
@@ -134,27 +134,37 @@
     <div class="wrap changes">
       <div>
         <h2 id="h-changes">What's new</h2>
-        <p class="when">Build 2026.11.25.2128, released November 25, 2026</p>
+        <p class="when">Build 2026.11.25.2329, released November 25, 2026</p>
       </div>
       <div class="notes">
         <ul>
-          <li>Mod, arcane and relic prices now stay up to date. JynxPrime looked each one up on warframe.market once and then kept that price, so some were weeks old.</li>
-          <li>Maxed mods and arcanes show what maxed copies sell for. Before, they showed the unranked price: a maxed Arcane Hot Shot showed about 12 platinum while it sells for about 285.</li>
-          <li>JynxPrime no longer gets stuck on "Couldn't download the game data" when one of its saved game data files is damaged.</li>
+          <li>The Relic planner shows void fissures again. warframestat.us stopped answering, which left the fissure list empty and broke the Daily &amp; weekly page in Trackers.</li>
+          <li>Trade history is easier to read: one line per trade, grouped by day, with search, filters and a Clear button.</li>
+          <li>Trade &amp; rivens, the Relic planner and Inventory no longer scroll the whole window. Only the panels that have more to show scroll.</li>
         </ul>
         <details><summary>All changes</summary>
-          <h3>Prices</h3>
+          <h3>Relic planner and Trackers</h3>
           <ul>
-            <li>Prices older than 3 hours are looked up again in the background while you look at your Inventory or Sell list, oldest first.</li>
-            <li>The WTS / WTB prices further down your Inventory, and the ones on the Sell list, are refreshed too. Before, only the first rows were.</li>
-            <li>The warframe.market panel's "recent trades" price is for the rank you're looking at.</li>
-            <li>Price alerts check against fresh prices.</li>
+            <li>Fissures, the sortie, Archon Hunt, Baro Ki'Teer and Nightwave now come from Warframe's own data while warframestat.us is down.</li>
+            <li>If something can't be loaded, a short note says so instead of an empty panel.</li>
+            <li>The relic cards scroll in their own area. The toolbar, the relic count, Show more and "Only owned" stay in place and never cover the cards.</li>
+            <li>The fissure panel on the right scrolls on its own and is no longer cut off at the bottom.</li>
           </ul>
-          <h3>Loading screen</h3>
+          <h3>Trade &amp; rivens</h3>
           <ul>
-            <li>A saved game data file that got damaged (for example when two JynxPrime windows saved it at the same time) is downloaded again instead of keeping you on the loading screen.</li>
-            <li>Files are now saved in a way that a cut-off save can't leave half a file behind.</li>
-            <li>The loading screen only says "check your internet connection" when a download really failed.</li>
+            <li>Trade history groups your trades by day, with each day's number of trades and net platinum, one line per trade. A whole prime set shows as the set. Click a trade to see every item in it.</li>
+            <li>Search your trades and filter them by type.</li>
+            <li>Clear the past day, week, month or your whole history, with Undo.</li>
+            <li>The tabs and the warframe.market account controls stay put. Market Search, My Listings and Recent Sales fit the window and scroll inside themselves.</li>
+          </ul>
+          <h3>Inventory</h3>
+          <ul>
+            <li>The window no longer moves a little when you scroll over the page header.</li>
+            <li>The warframe.market panel's Post row (Post sell, Units, Price) is never cut off.</li>
+          </ul>
+          <h3>Menu</h3>
+          <ul>
+            <li>In a shorter window, the picture at the bottom of the menu hides so Settings stays visible.</li>
           </ul>
         </details>
       </div>
@@ -165,7 +175,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="h-download">Download</h2>
-        <p>Version 1.0.0, build 2026.11.25.2128. Free, no account needed.</p>
+        <p>Version 1.0.0, build 2026.11.25.2329. Free, no account needed.</p>
       </div>
       <div class="files">
         <div class="file main">
@@ -184,8 +194,8 @@
       <details class="sums">
         <summary>SHA-256 checksums</summary>
         <dl>
-          <dt>JynxPrime-Setup.exe</dt><dd>6e7f149061da0f5ab79a4fb0f7db303a3f9cca7cc248589c93b1f975c8e1c559</dd>
-          <dt>JynxPrime.zip</dt><dd>6e01841fe8c4ef0394bd3d4da5394867ae62e2e1f3105fd3b94ec0b15ee9ca1d</dd>
+          <dt>JynxPrime-Setup.exe</dt><dd>e3477ad762eea922a78f824d203cc21b9bed884c6089c8c3296153f59815dd5a</dd>
+          <dt>JynxPrime.zip</dt><dd>341a3684607f8452ad8121753cf28c242944ea102d8254d3aa49352b3e2c3bc8</dd>
         </dl>
       </details>
       <div class="install">
