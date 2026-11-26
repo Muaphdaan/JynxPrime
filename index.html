@@ -49,7 +49,7 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
           Download for Windows
         </a>
-        <p class="meta">Version 1.0.0 (build 2026.11.23.2310) · 92 MB installer · free<br>Windows 10 or 11, 64-bit · <a href="download/portable/">portable zip</a> · <a href="#download">other options</a></p>
+        <p class="meta">Version 1.0.0 (build 2026.11.24.1125) · 92 MB installer · free<br>Windows 10 or 11, 64-bit · <a href="download/portable/">portable zip</a> · <a href="#download">other options</a></p>
       </div>
     </div>
     <figure class="shot">
@@ -134,44 +134,29 @@
     <div class="wrap changes">
       <div>
         <h2 id="h-changes">What's new</h2>
-        <p class="when">Build 2026.11.23.2310, released November 23, 2026</p>
+        <p class="when">Build 2026.11.24.1125, released November 24, 2026</p>
       </div>
       <div class="notes">
         <ul>
-          <li>The in-game overlays should now work on every screen shape and size: 16:10, 4:3, 5:4, ultrawide 21:9 and 32:9, from 720p to 4K. They size everything the way Warframe sizes its menus, from a 1080p layout scaled to fit your screen.</li>
-          <li>The overlays now follow Warframe's Menu Scale on every screen. At 70% and below, the riven cycling overlays used to miss the game's buttons and never open.</li>
-          <li>In Riven Splicing, picking another riven no longer leaves the last riven's advice up when JynxPrime can't read the new card.</li>
+          <li>The Riven Splicing overlay is about twice as fast: its panels show about a second after you open Riven Splicing or pick another riven, instead of about two. A riven you've already looked at shows right away.</li>
+          <li>Relic rewards: a screen with three rewards is no longer read as four, which could mix up the reward names.</li>
+          <li>When JynxPrime's window is maximized, you can drag its title bar down to make it normal size again, and drag it to the top of the screen to maximize it.</li>
         </ul>
         <details><summary>All changes</summary>
-          <h3>Every screen shape</h3>
-          <ul>
-            <li>The overlays grow and shrink with the game like its menus do: bigger at 1440p and 4K, smaller but still readable at 720p. At 1920×1080 their content is the same size as before. If you set <strong>Rewards overlay size</strong> to Large or Extra large because it was small on a 1440p or 4K screen, try Compact again.</li>
-            <li>Relic rewards: on 16:10, 4:3 and 5:4 screens, the reward names are read from the right places. Before, four rewards could be read as three. At 720p, 768p and 900p, the rewards overlay no longer covers the bottom of the booster row.</li>
-            <li>Relic selection: on 4:3 and 5:4 screens, Omnia fissures are now recognised, and at 1024×768 the relic overlay no longer covers the fifth column of relics.</li>
-            <li>Rivens linked in chat: on ultrawide screens, the card now sits right beside the game's popup instead of at the far edge.</li>
-            <li>Riven cycling: on 16:10, 4:3 and 5:4 screens, JynxPrime finds the riven card by its MR line, so it never shows a roll made of the wrong lines. If it can't tell, it shows nothing. On 32:9 screens it now finds the riven's weapon.</li>
-            <li>Riven Splicing: <strong>Splice check</strong> and <strong>Riven splicing</strong> are only as tall as what's in them, so on 4:3 and 5:4 screens and at lower Menu Scales they no longer cover the game with empty space. On 4:3 and 5:4, <strong>Riven splicing</strong> now sits under <strong>Splice check</strong>, where it has more room. On ultrawide screens, JynxPrime finds the splicing column from the game's SPLICE button.</li>
-            <li>When Windows' built-in text reader takes the game's text as slightly tilted, JynxPrime now corrects the positions it reports. Before, this could keep the riven cycling overlays from noticing the reroll screen.</li>
-          </ul>
-          <h3>Menu Scale</h3>
-          <ul>
-            <li>Set it in <strong>Settings › In-game overlays › Warframe "Menu Scale" setting</strong>, or click <strong>Autodetect</strong> next to it. With a Custom Menu Scale, Autodetect now reads the right percentage. Before, it could come out far too small (even 1%), so if you use Custom, click it again.</li>
-            <li>Below Full, the riven cycling overlays now open at 70% and below and with Legacy at 1440p, and they no longer cover the currency bar or LOCK TRAIT. The relic overlay no longer covers the currency bar, and it shows your Void Traces at 90% and below instead of "–".</li>
-            <li>With Legacy on 16:10 screens like 1920×1200, JynxPrime now takes the menus as full size, which should match the game (not yet checked in game).</li>
-          </ul>
           <h3>Riven Splicing</h3>
           <ul>
-            <li>When you pick another riven and its card can't be read yet, both panels dim and say <strong>reading…</strong>, then show "Can't read the riven on screen." Before, they could keep the last riven's splices up.</li>
-            <li>If JynxPrime finds the splicing screen but can't read it at all, the panels now open after a few seconds and say so. Before, nothing showed up.</li>
+            <li>Riven cards have moving art, and JynxPrime took every frame of it as a new riven, so it kept reading the screen over and over and the panels came late. It now looks only at the card's text, and it notices the splicing screen as soon as the game opens it.</li>
+            <li>The last rivens you looked at show right away when you pick them again. JynxPrime checks them once more a few seconds later.</li>
+            <li>When a card can't be read, JynxPrime tries that card again and clears the panels instead of keeping the last riven's advice up.</li>
           </ul>
-          <h3>Other fixes</h3>
+          <h3>Relic rewards</h3>
           <ul>
-            <li>A riven linked in chat is no longer taken for its weapon's Prime version when someone in chat names the Prime (like "WTB Soma Prime").</li>
-            <li>With Warframe on a second monitor, the overlays no longer jump to your main monitor when JynxPrime briefly loses track of the game window.</li>
+            <li>On some three-reward screens, one word of a reward's name sits a little higher than the rest of its line. JynxPrime took that word as a fourth reward and split the names in the wrong places. It now keeps the name together.</li>
           </ul>
-          <h3>Good to know</h3>
+          <h3>Window</h3>
           <ul>
-            <li>Only 16:9 screens (and 16:10 on the Riven Splicing screen) were measured in the game so far. Other shapes follow Warframe's sizing rules. If an overlay looks off on your screen, a screenshot and your companion.log (in %APPDATA%\JynxPrime) help: it now notes your game's size and Menu Scale when it sees a screen it can't read.</li>
+            <li>Maximized, drag the title bar down and the window goes back to its normal size under your mouse, like other Windows apps. Let go at the very top of a screen and it maximizes again.</li>
+            <li>Windows' see-through preview while dragging, and snapping to the sides of the screen, aren't there yet.</li>
           </ul>
         </details>
       </div>
@@ -182,7 +167,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="h-download">Download</h2>
-        <p>Version 1.0.0, build 2026.11.23.2310. Free, no account needed.</p>
+        <p>Version 1.0.0, build 2026.11.24.1125. Free, no account needed.</p>
       </div>
       <div class="files">
         <div class="file main">
@@ -201,8 +186,8 @@
       <details class="sums">
         <summary>SHA-256 checksums</summary>
         <dl>
-          <dt>JynxPrime-Setup.exe</dt><dd>e595f8e855798790a6816cd6d6394cc83419f73c9d321cd9331c12cd10996b54</dd>
-          <dt>JynxPrime.zip</dt><dd>1dd03e67e1852e64efff7b16f0c4df51ecd5e9f5365f855a778f472094973635</dd>
+          <dt>JynxPrime-Setup.exe</dt><dd>0164da3ee706538dd9a4498e79731f6fe688ff970261dd65563c4ef89abff5c6</dd>
+          <dt>JynxPrime.zip</dt><dd>e02fd7ca9ebd14e9739a7203212a58771e8367eefd1fb6d1e0c9db2d993da572</dd>
         </dl>
       </details>
       <div class="install">
