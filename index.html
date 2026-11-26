@@ -49,7 +49,7 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
           Download for Windows
         </a>
-        <p class="meta">Version 1.0.0 (build 2026.11.24.1125) · 92 MB installer · free<br>Windows 10 or 11, 64-bit · <a href="download/portable/">portable zip</a> · <a href="#download">other options</a></p>
+        <p class="meta">Version 1.0.0 (build 2026.11.25.2128) · 92 MB installer · free<br>Windows 10 or 11, 64-bit · <a href="download/portable/">portable zip</a> · <a href="#download">other options</a></p>
       </div>
     </div>
     <figure class="shot">
@@ -134,29 +134,27 @@
     <div class="wrap changes">
       <div>
         <h2 id="h-changes">What's new</h2>
-        <p class="when">Build 2026.11.24.1125, released November 24, 2026</p>
+        <p class="when">Build 2026.11.25.2128, released November 25, 2026</p>
       </div>
       <div class="notes">
         <ul>
-          <li>The Riven Splicing overlay is about twice as fast: its panels show about a second after you open Riven Splicing or pick another riven, instead of about two. A riven you've already looked at shows right away.</li>
-          <li>Relic rewards: a screen with three rewards is no longer read as four, which could mix up the reward names.</li>
-          <li>When JynxPrime's window is maximized, you can drag its title bar down to make it normal size again, and drag it to the top of the screen to maximize it.</li>
+          <li>Mod, arcane and relic prices now stay up to date. JynxPrime looked each one up on warframe.market once and then kept that price, so some were weeks old.</li>
+          <li>Maxed mods and arcanes show what maxed copies sell for. Before, they showed the unranked price: a maxed Arcane Hot Shot showed about 12 platinum while it sells for about 285.</li>
+          <li>JynxPrime no longer gets stuck on "Couldn't download the game data" when one of its saved game data files is damaged.</li>
         </ul>
         <details><summary>All changes</summary>
-          <h3>Riven Splicing</h3>
+          <h3>Prices</h3>
           <ul>
-            <li>Riven cards have moving art, and JynxPrime took every frame of it as a new riven, so it kept reading the screen over and over and the panels came late. It now looks only at the card's text, and it notices the splicing screen as soon as the game opens it.</li>
-            <li>The last rivens you looked at show right away when you pick them again. JynxPrime checks them once more a few seconds later.</li>
-            <li>When a card can't be read, JynxPrime tries that card again and clears the panels instead of keeping the last riven's advice up.</li>
+            <li>Prices older than 3 hours are looked up again in the background while you look at your Inventory or Sell list, oldest first.</li>
+            <li>The WTS / WTB prices further down your Inventory, and the ones on the Sell list, are refreshed too. Before, only the first rows were.</li>
+            <li>The warframe.market panel's "recent trades" price is for the rank you're looking at.</li>
+            <li>Price alerts check against fresh prices.</li>
           </ul>
-          <h3>Relic rewards</h3>
+          <h3>Loading screen</h3>
           <ul>
-            <li>On some three-reward screens, one word of a reward's name sits a little higher than the rest of its line. JynxPrime took that word as a fourth reward and split the names in the wrong places. It now keeps the name together.</li>
-          </ul>
-          <h3>Window</h3>
-          <ul>
-            <li>Maximized, drag the title bar down and the window goes back to its normal size under your mouse, like other Windows apps. Let go at the very top of a screen and it maximizes again.</li>
-            <li>Windows' see-through preview while dragging, and snapping to the sides of the screen, aren't there yet.</li>
+            <li>A saved game data file that got damaged (for example when two JynxPrime windows saved it at the same time) is downloaded again instead of keeping you on the loading screen.</li>
+            <li>Files are now saved in a way that a cut-off save can't leave half a file behind.</li>
+            <li>The loading screen only says "check your internet connection" when a download really failed.</li>
           </ul>
         </details>
       </div>
@@ -167,7 +165,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="h-download">Download</h2>
-        <p>Version 1.0.0, build 2026.11.24.1125. Free, no account needed.</p>
+        <p>Version 1.0.0, build 2026.11.25.2128. Free, no account needed.</p>
       </div>
       <div class="files">
         <div class="file main">
@@ -186,8 +184,8 @@
       <details class="sums">
         <summary>SHA-256 checksums</summary>
         <dl>
-          <dt>JynxPrime-Setup.exe</dt><dd>0164da3ee706538dd9a4498e79731f6fe688ff970261dd65563c4ef89abff5c6</dd>
-          <dt>JynxPrime.zip</dt><dd>e02fd7ca9ebd14e9739a7203212a58771e8367eefd1fb6d1e0c9db2d993da572</dd>
+          <dt>JynxPrime-Setup.exe</dt><dd>6e7f149061da0f5ab79a4fb0f7db303a3f9cca7cc248589c93b1f975c8e1c559</dd>
+          <dt>JynxPrime.zip</dt><dd>6e01841fe8c4ef0394bd3d4da5394867ae62e2e1f3105fd3b94ec0b15ee9ca1d</dd>
         </dl>
       </details>
       <div class="install">
